@@ -25,7 +25,7 @@ private:
 	int timepoint = 0;
 	double changedValue = 0.0;
 
-	std::pair<double, double> dClickRange = { 13.845364 ,10.063455 };// +-0.6 so more like 14.5-12.3; 
+	std::pair<double, double> dClickRange = { 14.845364 ,10.563455 };// +-0.6 so more like 14.5-12.3; 
 	std::pair<double, double> dInBetweenRange = { 18.34565464,6.3456546 };//TRUE DELAYS 4 for 20 cps and 100 for 5 cps
 
 

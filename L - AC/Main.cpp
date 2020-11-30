@@ -10,7 +10,6 @@
 
 bool bMcInFocus() {
 	HWND hWnd = GetForegroundWindow();
-	DWORD pid = 0;
 	char filename[256];
 	GetWindowText(hWnd, filename, sizeof(filename));
 	if (std::string(filename).find("Minecraft") != std::string::npos || std::string(filename).find("Lunar") != std::string::npos || std::string(filename).find("Badlion") != std::string::npos)
