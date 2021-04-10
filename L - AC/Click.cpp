@@ -1,6 +1,6 @@
 #include "CommonIncludes.hpp"
 #include "Click.hpp"
-#include "Random.h"
+#include "Random.hpp"
 
 Clicker cClicker;
 

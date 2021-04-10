@@ -6,7 +6,7 @@
 #include <string>
 #include <thread>
 #include "Config.hpp"
-#include "Random.h"
+#include "Random.hpp"
 
 bool bMcInFocus() {
 	HWND hWnd = GetForegroundWindow();
