@@ -94,28 +94,26 @@ int main(int argc, char* argv[]) {
 			cAutoPot.iCurrentSlot++;
 			if (cAutoPot.iCurrentSlot > 9)
 				cAutoPot.iCurrentSlot = 2;
-
-
 			ard.send_data(buf.c_str(), sizeof(buf));
 		}
 
-		if (clock() - UiToggleTimer > 300) {
-			if ((GetAsyncKeyState(VK_INSERT) & 0x8000)) {
+		if (clock() - UiToggleTimer > 150) {
+			if ((GetAsyncKeyState(VK_INSERT))) {
 				UiToggleTimer = clock();
 				st_Options.bShowUi = !st_Options.bShowUi;
 				st_Options.bShowUi ? (ShowWindow(GetConsoleWindow(), SW_SHOW)) : ShowWindow(GetConsoleWindow(), SW_HIDE);
 			}
-			else if ((GetAsyncKeyState(VK_NUMPAD1) & 0x8000)) {
+			else if ((GetAsyncKeyState(VK_NUMPAD1))) {
 				UiToggleTimer = clock();
 				st_Options.bClicker = !st_Options.bClicker;
 				Print_UI(out, st_Options);
 			}
-			else if ((GetAsyncKeyState(VK_NUMPAD2) & 0x8000)) {
+			else if ((GetAsyncKeyState(VK_NUMPAD2))) {
 				UiToggleTimer = clock();
 				st_Options.bAutoPot = !st_Options.bAutoPot;
 				Print_UI(out, st_Options);
 			}
-			else if ((GetAsyncKeyState(VK_NUMPAD3) & 0x8000)) {
+			else if ((GetAsyncKeyState(VK_NUMPAD3))) {
 				UiToggleTimer = clock();
 				st_Options.bSoupPot = !st_Options.bSoupPot;
 				Print_UI(out, st_Options);

@@ -15,8 +15,9 @@ bool Random::Initialize() {
 	CryptAcquireContextA(&bois, NULL, NULL, NULL, NULL);
 	BYTE buffer[30];
 
-	unsigned int buf;
-	CryptGenRandom(bois, sizeof(buffer), buffer);
+	unsigned int buf = 0;
+	CryptGenRandom(bois, 30, buffer);
+
 
 	for (int c = 0; c < sizeof(buffer); ++c) {
 		if (buffer[c] == 0)

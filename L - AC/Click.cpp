@@ -12,7 +12,7 @@ void tClicker() {
 
 	while (!GetAsyncKeyState(VK_ADD)) {
 		Sleep(1);
-		if (clock() - timerforDefault > signed int(cRandomDevice.RandomInt(1400, 1000))) {
+		if (clock() - timerforDefault > signed int(cRandomDevice.RandomInt(1500, 1200))) {
 			cClicker.DefaultRandomize();
 			timerforDefault = clock();
 		}
@@ -93,7 +93,7 @@ void Clicker::ChanceShit() {
 	if (!Chanced)
 		return;
 
-	if ((clock()-ClickTime) - timepoint > cRandomDevice.RandomInt(chanceMaxDuration, chanceMinDuration)) {
+	if (unsigned int((clock()-ClickTime) - timepoint) > cRandomDevice.RandomInt(chanceMaxDuration, chanceMinDuration)) {
 		Chanced = false;
 	}
 
