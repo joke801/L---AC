@@ -152,7 +152,7 @@
     <ClInclude Include="Click.hpp" />
     <ClInclude Include="CommonIncludes.hpp" />
     <ClInclude Include="Config.hpp" />
-    <ClInclude Include="Random.h" />
+    <ClInclude Include="Random.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
